@@ -40,7 +40,7 @@ Before implementing code, the supplied file `data/ai_bi_assistant_sales_data - G
 - **Total CSV rows**: 51
 - **Excluded records**: Exactly 3 (`TXN0033`, `TXN0034`, `TXN0051`)
 - **Valid completed sales records**: 48
-- **Total Net Revenue**: **$1,439,200.00**
+- **Total Net Revenue**: **1,439,200.00** (currency unspecified)
   - Gross Revenue: 1,443,700.00
   - Discounts: 4,500.00
   - Units Sold: 633
@@ -67,7 +67,7 @@ Before implementing code, the supplied file `data/ai_bi_assistant_sales_data - G
 - **Symptom**: When comparing a month with sales against a month with zero sales, a naive percentage formula `(rev2 - rev1) / rev1` raised `ZeroDivisionError`.
 - **Resolution**: Implemented guarded logic in `analytics.get_month_to_month_comparison`:
   - If both months have zero sales: 0.0% variance.
-  - If base month has zero sales and target month has sales: returns +100.0% with a descriptive footnote explaining the $0 baseline.
+  - If base month has zero sales and target month has sales: returns +100.0% with a descriptive footnote explaining the zero baseline.
   - Added dedicated unit test `test_month_to_month_comparison_zero_base` to prevent regression.
 
 ### Problem 4: Destructive Query Misclassification ("Delete all sales records" -> total_revenue)
