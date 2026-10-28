@@ -140,7 +140,7 @@ if summary:
     with col1:
         st.metric(
             label="Total Net Revenue",
-            value=f"${summary['total_net_revenue']:,.2f}",
+            value=f"{summary['total_net_revenue']:,.2f}",
             help="Net revenue = (Quantity * Unit Price) - Discount across all completed sales."
         )
     with col2:
@@ -237,10 +237,10 @@ with tab_ask:
             if intent == "total_revenue" and figures:
                 st.markdown("#### Key Metrics")
                 m1, m2, m3, m4 = st.columns(4)
-                m1.metric("Gross Revenue", f"${figures.get('gross_revenue', 0):,.2f}")
-                m2.metric("Total Discounts", f"${figures.get('total_discounts', 0):,.2f}")
-                m3.metric("Net Revenue", f"${figures.get('total_net_revenue', 0):,.2f}")
-                m4.metric("Avg Order Value", f"${figures.get('average_order_value', 0):,.2f}")
+                m1.metric("Gross Revenue", f"{figures.get('gross_revenue', 0):,.2f}")
+                m2.metric("Total Discounts", f"{figures.get('total_discounts', 0):,.2f}")
+                m3.metric("Net Revenue", f"{figures.get('total_net_revenue', 0):,.2f}")
+                m4.metric("Avg Order Value", f"{figures.get('average_order_value', 0):,.2f}")
 
             elif intent == "highest_revenue_product" and table_data:
                 st.markdown("#### Product Revenue Breakdown")
@@ -263,11 +263,11 @@ with tab_ask:
             elif intent == "month_to_month_comparison" and figures:
                 st.markdown("#### Variance Analysis")
                 c1, c2, c3 = st.columns(3)
-                c1.metric(f"{figures.get('month1_name')} Revenue", f"${figures.get('month1_revenue', 0):,.2f}")
-                c2.metric(f"{figures.get('month2_name')} Revenue", f"${figures.get('month2_revenue', 0):,.2f}")
+                c1.metric(f"{figures.get('month1_name')} Revenue", f"{figures.get('month1_revenue', 0):,.2f}")
+                c2.metric(f"{figures.get('month2_name')} Revenue", f"{figures.get('month2_revenue', 0):,.2f}")
                 c3.metric(
                     "Revenue Variance",
-                    f"${figures.get('absolute_change', 0):,.2f}",
+                    f"{figures.get('absolute_change', 0):,.2f}",
                     delta=f"{figures.get('percentage_change', 0)}%"
                 )
 
