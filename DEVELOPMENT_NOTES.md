@@ -41,12 +41,12 @@ Before implementing code, the supplied file `data/ai_bi_assistant_sales_data - G
 - **Excluded records**: Exactly 3 (`TXN0033`, `TXN0034`, `TXN0051`)
 - **Valid completed sales records**: 48
 - **Total Net Revenue**: **$1,439,200.00**
-  - Gross Revenue: $1,443,200.00
-  - Discounts: $4,000.00
+  - Gross Revenue: 1,443,700.00
+  - Discounts: 4,500.00
   - Units Sold: 633
   - Transactions: 48
-- **Top Product**: Monitor ($473,000.00, 32.87% of revenue)
-- **Top Region**: South ($411,200.00, 28.57% of revenue)
+- **Top Product**: Monitor (473,000.00, 32.87% of revenue)
+- **Top Region**: South (411,200.00, 28.57% of revenue)
 - **Date Range**: 2026-01-03 to 2026-06-28 (6 months)
 
 ---
